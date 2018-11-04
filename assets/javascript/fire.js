@@ -14,9 +14,7 @@ $(document).ready(function() {
 
   var database = firebase.database();
 
-  // First Time (pushed back 1 year to make sure it comes before current time)
-   
- 
+  //btn used to submit user-input
   $("#submit-btn").on("click", function(event) {
   		event.preventDefault();
 
