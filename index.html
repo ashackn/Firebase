@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase Train</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-ML9h/UCooefre72ZPxxOHyjbrLT1xKV0AHON1J+OlOV2iwcYemqmWyMfTcfyzLJ1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+ <!-- Train Tracker -->
+ <div class="container">
+
+  <div class="jumbotron jumbotron-fluid">
+    <h1 class="display-4">Mountain Train Station</h1>
+    <br>
+    <!--<p class="lead">View the train schedule below.</p>-->
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-12">
+
+      <!-- Current Schedule-->
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
+        </div>
+        <div class="panel-body">
+          <table class="table table-hover" id='train-table'>
+            <thead>
+              <tr>
+                <th>Train Name</th>
+                <th>Destination</th>
+                <th>Frequency (min)</th>
+                <th>Next Arrival</th>
+                <th>Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+    <!-- Add Schedule  -->
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><strong>Add Train</strong></h3>
+      </div>
+      <div class="panel-body">
+
+        <!-- Entry Form -->
+        <form>
+          <div class="form-group">
+            <label for="train-name-input">Train Name</label>
+            <input class="form-control" id="train-name-input" type="text">
+          </div>
+          <div class="form-group">
+            <label for="dest-input">Destination</label>
+            <input class="form-control" id="dest-input" type="text">
+          </div>
+          <div class="form-group">
+            <label for="firstTrain-input">First Train Time (HH:mm - military time)</label>
+            <input class="form-control" id="firstTrain-input" type="text">
+          </div>
+          <div class="form-group">
+            <label for="freq-input">Frequency (min)</label>
+            <input class="form-control" id="freq-input" type="text">
+          </div>
+          <button class="btn" id="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="assets/javascript/fire.js"></script>  
+</body>
+</html>
+
